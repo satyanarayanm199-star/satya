@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <style>
+        body {
+            background-color: #ffe6f7;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            color: #d81b60;
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f39c12;
+            animation: confetti 3s linear infinite;
+        }
+        @keyframes confetti {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(600px) rotate(360deg); }
+        }
+        #secret-message {
+            display: none;
+            margin-top: 30px;
+            font-size: 1.5em;
+            color: #d81b60;
+        }
+        .confetti-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday, Somyashree(Lisi)!</h1>
+    <p>My wife, on your special day, I wish you endless joy and love.</p>
+    <p class="heart">❤️</p>
+    <button onclick="showSecret()">MESSAGE</button>
+    <div id="secret-message">You are my everything,Sorry tate ketekatha sabubele kuhe mun manuchi ki tu agaru relationship re thilu seita moro pasand nuhe kintu tate mun sabubele chahne 🥺 moro gote Dara janichu kn to thu mate kia jemiti durei na dau se jemiti bi hau family pressure ki jaha bhi mo dhana tate mun jetiki bhala pauthili ajji bhi setiki pauchui. mun please tate gote request mo tharu mate tk adhika bhala paa please 🙏🏻bhal paiba ta kahaku magiba katha nuhe but mun tate maguchi au please emitika kichi bi karibuni jouthpai ki mate hurt hue please 🙏🏻jaha bi hurt karichu agaru chad...
+Mun tate to Birthday re upset karibaku chahnuni( jadi bhi to Birthday re msg dekhuchu )
+au mun janini ki to pai mun thik ki nai toro kemitika pua Pasand mun janini hele jadi mo hata Dharichu kebe bi please future re kahibuni ki gote bhul/kharap pila ra hata dharideli 🙏🏻</div>
+
+    <div class="confetti-container">
+        <!-- Create multiple confetti elements -->
+        <script>
+            for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDuration = 2 + Math.random() * 3 + 's';
+                document.querySelector('.confetti-container').appendChild(confetti);
+            }
+        </script>
+    </div>
+
+    <script>
+        function showSecret() {
+            document.getElementById('secret-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
